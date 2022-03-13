@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Edvora_Assignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edvora">Edvora</string>
+    <string name="rides">Rides:</string>
+    <string name="filters">Filters</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="state_name">State Name</string>
+    <string name="ride_id_002">Ride Id : 002</string>
+    <string name="origin_station_20">Origin Station : 20</string>
+    <string name="station_path_23_42_45_48_56_60_77_81_93">station_path: [23, 42, 45, 48, 56, 60, 77, 81, 93]</string>
+    <string name="date_15th_feb_2022_16_33">Date : 15th Feb 2022 16:33</string>
+    <string name="distance_0">Distance : 0</string>
+    <string name="city_name">City Name</string>
+</resources>
