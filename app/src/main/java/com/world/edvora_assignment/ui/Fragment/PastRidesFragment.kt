@@ -39,10 +39,6 @@ class PastRidesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        //Disabling Filter Property on PastRidesFragment
-        val mainview = (requireActivity() as MainActivity).bind
-        mainview?.filterLayout?.isClickable = false
-
         _binding = FragmentPastRidesBinding.inflate(inflater, container, false)
         return binding.root
     }

@@ -3,6 +3,9 @@ package com.world.edvora_assignment.ui.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TableLayout
+import android.widget.Toast
+import com.google.android.material.tabs.TabLayout
 import com.world.edvora_assignment.Util.Pager_Adapter
 import com.world.edvora_assignment.databinding.ActivityMainBinding
 import com.world.edvora_assignment.ui.Fragment.NearestRidesFragment
@@ -40,6 +43,17 @@ class MainActivity : AppCompatActivity() {
 
         binding?.viewPager?.adapter = adapter2
         binding?.standingTabLayout?.setupWithViewPager(binding?.viewPager)
+
+
+        binding?.standingTabLayout?.addOnTabSelectedListener(object :
+            TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                binding?.filterLayout?.isClickable = (tab?.position == 0)
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
+        })
     }
 
 }

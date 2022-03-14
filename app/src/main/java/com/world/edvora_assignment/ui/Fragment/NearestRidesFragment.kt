@@ -90,7 +90,7 @@ class NearestRidesFragment : Fragment() {
 
     private fun click_listeners(mainview: ActivityMainBinding?) {
 
-        mainview?.filterLayout?.isClickable = true
+
 
         mainview?.filterLayout?.setOnClickListener {
             if (mainview.filterBoxLayout.isVisible)
@@ -157,6 +157,7 @@ class NearestRidesFragment : Fragment() {
 
     }
 
+
     private fun  setUserData(binding : ActivityMainBinding?) {
 
         viewModel2.get_user_details()
@@ -172,6 +173,9 @@ class NearestRidesFragment : Fragment() {
                         setNearestRides()
                     }
                     is UserDataViewModel.MainStateEvent.Failure -> {
+                        Toast.makeText(context , "An Error Occured", Toast.LENGTH_SHORT).show()
+                        _binding?.progressBar?.visibility = View.GONE
+
                     }
                     is UserDataViewModel.MainStateEvent.Loading -> {}
                     else -> Unit
